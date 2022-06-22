@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body id="body">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+<script>
+    const target = document.getElementById('body')
+
+    function traverse(target, callback){
+    if(target.nodeType === 1){
+        if(target.nodeName === "Li"){
+        callback(target);
+        var c = target.childNodes;
+        for(var i=0; i<c.length; i++){
+            traverse(c[i], callback);       
+        }   
+    }}
+}
+
+    traverse(target,function(ele){
+        console.log(ele)
+    })
+</script>
+</html>
