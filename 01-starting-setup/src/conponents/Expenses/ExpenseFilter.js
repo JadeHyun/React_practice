@@ -4,8 +4,10 @@ import './ExpenseFilter.css'
 
 const ExpensesFilter = (props) => {
     const dropDownChangeHandler = (e) =>{
-        console.log(e.target.value)
-        console.log(props.onChangeFilter(e.target.value))
+        // console.log(e.target.value)
+        // console.log(props.onChangeFilter)
+        props.onChangeFilter(e.target.value)
+        // props 로 받은 onChangeFilter 에 파라미터로 현재 값을 넘겨준다.
     }
 
   return (
